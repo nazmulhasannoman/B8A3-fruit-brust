@@ -7,19 +7,28 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/2cf84aaac4.js" crossorigin="anonymous"></script>
+    <style>
+        .font-lato {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
 </head>
 
 
 
-<body>
+<body class="font-lato">
     <header>
         <!-- navbar starts -->
         <nav>
             <div class="navbar bg-error rounded-full  justify-around">
                 <div>
-                    <ul class="flex text-white">
+                    <ul class="flex text-white text-lg font-medium">
                         <li class="mr-2.5">Home</li>
                         <li class="mr-2.5">About Us</li>
                         <li class="mr-2.5">Shop</li>
@@ -29,12 +38,13 @@
                 <div class="justify-between	">
                     <div class="p-4"><img src="images/logo.png" alt=""></div>
                     <div>
-                        <p class="text-white">Fruit Burst</p>
+                        <p class="text-white font-bold text-4xl">Fruit Burst</p>
                     </div>
                 </div>
                 <div class="flex-none gap-2">
                     <div class="form-control">
-                        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                        <input type="text" placeholder="Search here"
+                            class="input input-bordered w-24 md:w-auto text-base font-normal" />
 
                     </div>
 
@@ -45,8 +55,18 @@
 
     </header>
     <main>
+        <!-- extra portion -->
+        <div class="relative left-40 top-80 ">
+            <div>
+                <p class="text-4xl text-white">Exotic tastes at your doorstep</p>
+                <p>We supply highly quality organic products</p>
+
+            </div>
+            <div><button class="btn btn-error ">Primary</button></div>
+        </div>
         <!-- exotic foods section starts -->
-        <section class="m-8">
+        <section class=" sm: w-full sm:m-0 lg:m-8">
+
             <div class="carousel w-full h-auto ">
                 <div id="slide1" class="carousel-item relative w-full">
                     <img src="images/banner1.png" class="w-full" />
@@ -107,10 +127,11 @@
         <!-- exotic food section ends -->
 
         <!-- deal day starts -->
-        <section class="flex bg-primary-content h-80">
+        <section class="flex bg-slate-50 h-80">
             <div class="w-1/2 p-24">
-                <h1>Deal of the day</h1>
-                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
+                <h1 class="text-5xl font-extrabold">Deal of the day</h1>
+                <p class="text-base font-medium">Contrary to popular belief, is not simply random text. It has roots in
+                    a piece of classical Latin
                     literature from 45 BC, making it over 2000 years old.</p>
 
             </div>
@@ -118,25 +139,25 @@
                 <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
                     <div class="flex flex-col">
                         <span class="countdown font-mono text-5xl">
-                            <span style="--value:15;"></span>:
+                            <span class="font-extrabold	text-5xl" style="--value:15;"></span>:
                         </span>
                         days
                     </div>
                     <div class="flex flex-col">
                         <span class="countdown font-mono text-5xl">
-                            <span style="--value:10;"></span>:
+                            <span class="font-extrabold	text-5xl" style="--value:10;"></span>:
                         </span>
                         hours
                     </div>
                     <div class="flex flex-col">
                         <span class="countdown font-mono text-5xl">
-                            <span style="--value:24;"></span>:
+                            <span class="font-extrabold	text-5xl" style="--value:24;"></span>:
                         </span>
                         min
                     </div>
                     <div class="flex flex-col">
                         <span class="countdown font-mono text-5xl">
-                            <span style="--value:34;"></span>:
+                            <span class="font-extrabold	text-5xl" style="--value:34;"></span>:
                         </span>
                         sec
                     </div>
@@ -147,7 +168,7 @@
         <!-- deal day ends -->
 
         <!-- shop all starts -->
-        <section class="bg-primary-content ">
+        <section class=" bg-slate-50 ">
             <div class="flex justify-around m-4 p-4 gap-4">
                 <div class="card w-1/4 bg-base-100 shadow-xl">
                     <figure><img src="images/fruit6.png" alt="fruits" /></figure>
@@ -215,17 +236,20 @@
                 </div>
 
             </div>
-
-            <div class="ml-40">
-                <button class="btn btn-error content-center	">Shop All</button>
-            </div>
-
         </section>
+        <!-- shop all button -->
+        <div >
+            <div class="w-1/3"></div>
+            <button class="btn btn-error w-1/3 w-full text-white">Shop All</button>
+            <div class="w-1/3"></div>
+        </div>
+        <!-- shop all button -->
+
         <!-- shop all ends -->
 
         <section class="my-8 bg-primary-content " style="background-image:url('images/team.png')">
             <div class="my-8 p-8 text-white">
-                <h1 class="text-center">Meet the team section</h1>
+                <h1 class="text-center text-5xl font-extrabold text-white">Meet the team section</h1>
                 <p class="text-center">Contrary to popular belief, is not simply random text. It has roots in a piece of
                     classical Latin
                     literature from 45 BC, making it over 2000 years old.</p>
@@ -310,12 +334,12 @@
         </section>
         <!-- why choose us starts -->
 
-        <section class="bg-error">
-            <h1>Why Choose Us</h1>
-            <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
+        <section class="bg-slate-50">
+            <h1 class="text-center font-extrabold text-5xl">Why Choose Us</h1>
+            <p class="text-center text-xl">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin
                 literature from 45 BC, making it over 2000 years old.</p>
-            <div class="flex justify-around gap-20">
-                <div class="p-8">
+            <div class="flex justify-around gap-10">
+                <div class="p-16">
                     <div class="flex">
                         <div><i class="fa-solid fa-arrows-down-to-people"></i></div>
                         <div>
@@ -344,11 +368,11 @@
 
                     </div>
                 </div>
-                <div>
+                <div class="mt-16">
                     <img src="images/whychoose1.png" alt="">
 
                 </div>
-                <div class="p-8">
+                <div class="p-16">
                     <div class="flex">
                         <div><i class="fa-regular fa-lemon"></i></div>
                         <div>
@@ -384,12 +408,14 @@
 
 
     </main>
-    <footer class="bg-error my-8 h-80 p-10">
+    <footer class="bg-neutral my-8 h-80 p-10">
         <div class="flex justify-center my-8">
             <div><img src="images/logo.png" alt=""></div>
-            <div><p>Fruit Burst</p></div>
+            <div>
+                <p class="text-white">Fruit Burst</p>
+            </div>
         </div>
-        <div class="flex justify-around my-8">
+        <div class="flex justify-around my-8 text-white">
             <p>Home</p>
             <p>About Us</p>
             <p>Shop</p>
@@ -397,7 +423,7 @@
             <p>Support</p>
             <p>My Account</p>
         </div>
-        <div class="flex justify-around my-8 mx-40 ">
+        <div class="flex justify-around my-8 mx-40 text-white">
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-youtube"></i>
